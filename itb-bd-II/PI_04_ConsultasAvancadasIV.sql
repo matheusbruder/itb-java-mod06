@@ -53,14 +53,11 @@ from actors a
 where m.awards > 3;
 
 # 9. Crie um índice no nome na tabela de filmes.
-select *
-from movies;
-
 alter table movies
-    add constraint unique (title);
+    add index unique_title (title);
 
 # 10. Verifique se o índice foi criado corretamente.
-SHOW CREATE TABLE movies;
+show index from movies;
 
 # 11. No banco de dados movies, haveria uma melhoria notável na criação de índices? Analise e justifique a resposta.
 # ??????????
